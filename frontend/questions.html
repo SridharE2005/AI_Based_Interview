@@ -1,0 +1,228 @@
+<!-- frontend/questions.html -->
+<!doctype html>
+<html lang="en">
+<head>
+  <meta charset="utf-8" />
+  <meta name="viewport" content="width=device-width,initial-scale=1" />
+  <title>AptitudeAI — Questions</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="min-h-screen bg-slate-50 p-6">
+  <div class="max-w-3xl mx-auto bg-white rounded-2xl shadow p-6">
+    <div class="flex items-center justify-between mb-4">
+      <h2 id="categoryTitle" class="text-2xl font-semibold"></h2>
+      <div>
+        <select id="topicSelect" class="border px-3 py-2 rounded">
+          <option value="General">General</option>
+        </select>
+        <select id="difficultySelect" class="border px-3 py-2 rounded ml-2">
+          <option value="easy">Easy</option>
+          <option value="medium">Medium</option>
+          <option value="hard">Hard</option>
+        </select>
+      </div>
+    </div>
+
+    <div id="questionPanel">
+      <div id="questionText" class="text-lg font-medium mb-4">Loading question...</div>
+      <div id="optionsContainer" class="space-y-3 mb-4"></div>
+
+      <div id="submitRow" class="flex gap-3">
+        <button id="submitBtn" class="px-4 py-2 bg-green-600 text-white rounded">Submit Answer</button>
+        <button id="nextBtn" class="px-4 py-2 bg-blue-600 text-white rounded hidden">Next Question</button>
+        <button id="finishBtn" class="px-4 py-2 bg-gray-500 text-white rounded">Finish & Report</button>
+      </div>
+
+      <!-- Inline result/explanation area (initially hidden) -->
+      <div id="resultArea" class="mt-4 p-4 border rounded hidden">
+        <div id="answerStatus" class="font-semibold mb-2"></div>
+        <div id="correctAnswer" class="mb-2"></div>
+        <div id="explanation" class="text-sm text-gray-700"></div>
+      </div>
+    </div>
+  </div>
+
+  <script>
+    const apiBase = "http://127.0.0.1:8000"; // adjust if needed
+    const category = localStorage.getItem("apt_category") || "Quantitative";
+    document.getElementById("categoryTitle").textContent = category;
+
+    let currentQuestion = null;
+    let answeredQuestions = JSON.parse(localStorage.getItem("apt_previous_questions") || "[]");
+    let currentDifficulty = document.getElementById("difficultySelect").value;
+
+    // Example topic lists per category (expand as needed)
+    const topicOptions = {
+      "Quantitative": ["Arithmetic", "Algebra", "Percentages", "Ratio & Proportion", "Number Series", "Time & Work", "Speed & Distance"],
+      "Verbal": ["Vocabulary", "Grammar", "Para Jumbles", "Reading Comprehension", "Sentence Correction"],
+      "Reasoning": ["Syllogism", "Blood Relations", "Pattern", "Seating Arrangement"],
+      "Data Interpretation": ["Tables", "Graphs", "Pie Charts"],
+      "Logical": ["Deductive", "Inductive", "Critical Thinking"],
+      "Puzzle Solving": ["Grid Puzzles", "Sequence Puzzles"]
+    };
+
+    const topicSelect = document.getElementById("topicSelect");
+    // populate topics
+    (topicOptions[category] || ["General"]).forEach(t => {
+      const opt = document.createElement("option");
+      opt.value = t;
+      opt.textContent = t;
+      topicSelect.appendChild(opt);
+    });
+
+    document.getElementById("difficultySelect").onchange = (e) => {
+      currentDifficulty = e.target.value;
+    };
+
+    async function fetchQuestion() {
+      // hide result area & reset UI
+      document.getElementById("resultArea").classList.add("hidden");
+      document.getElementById("answerStatus").textContent = "";
+      document.getElementById("correctAnswer").textContent = "";
+      document.getElementById("explanation").textContent = "";
+
+      document.getElementById("questionText").textContent = "Loading question...";
+      document.getElementById("optionsContainer").innerHTML = "";
+      document.getElementById("submitBtn").disabled = false;
+      document.getElementById("nextBtn").classList.add("hidden");
+
+      const payload = {
+        category: category,
+        topic: topicSelect.value || "General",
+        difficulty: currentDifficulty,
+        previous_questions: answeredQuestions.slice(-50)  // send recent ones
+      };
+
+      try {
+        const res = await fetch(`${apiBase}/get_question`, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (res.status !== 200) {
+          throw new Error(data.detail || JSON.stringify(data));
+        }
+
+        currentQuestion = data;
+        renderQuestion(data);
+      } catch (err) {
+        console.error("Error loading question:", err);
+        document.getElementById("questionText").textContent = "Unable to load question. Try again.";
+      }
+    }
+
+    function renderQuestion(q) {
+      document.getElementById("questionText").textContent = q.question;
+      const oc = document.getElementById("optionsContainer");
+      oc.innerHTML = "";
+      q.options.forEach((opt, idx) => {
+        const id = `opt_${idx}`;
+        const wrapper = document.createElement("div");
+        wrapper.className = "flex items-center gap-3";
+
+        const radio = document.createElement("input");
+        radio.type = "radio";
+        radio.name = "answer";
+        radio.id = id;
+        radio.value = idx;
+        radio.className = "h-4 w-4";
+
+        const label = document.createElement("label");
+        label.htmlFor = id;
+        label.innerText = opt;
+        label.className = "select-none";
+
+        wrapper.appendChild(radio);
+        wrapper.appendChild(label);
+        oc.appendChild(wrapper);
+      });
+    }
+
+    async function submitAnswer() {
+      if (!currentQuestion) return;
+      const radios = document.getElementsByName("answer");
+      let selected = -1;
+      for (const r of radios) {
+        if (r.checked) {
+          selected = parseInt(r.value);
+          break;
+        }
+      }
+      if (selected === -1) {
+        alert("Please select an option before submitting.");
+        return;
+      }
+
+      // disable submit to avoid double clicks
+      document.getElementById("submitBtn").disabled = true;
+
+      const payload = {
+        question_id: currentQuestion.question_id,
+        selected_index: selected,
+        category: category,
+        topic: topicSelect.value || "General"
+      };
+
+      try {
+        const res = await fetch(`${apiBase}/submit_answer`, {
+          method: "POST",
+          headers: {"Content-Type": "application/json"},
+          body: JSON.stringify(payload)
+        });
+        const data = await res.json();
+        if (res.status !== 200) {
+          throw new Error(data.detail || JSON.stringify(data));
+        }
+
+        // show inline result + explanation (no popup)
+        document.getElementById("resultArea").classList.remove("hidden");
+        const statusEl = document.getElementById("answerStatus");
+        const correctEl = document.getElementById("correctAnswer");
+        const explEl = document.getElementById("explanation");
+
+        if (data.is_correct) {
+          statusEl.textContent = "Correct ✅";
+          statusEl.className = "font-semibold mb-2 text-green-700";
+        } else {
+          statusEl.textContent = "Incorrect ❌";
+          statusEl.className = "font-semibold mb-2 text-red-700";
+        }
+        correctEl.innerHTML = `<strong>Correct Answer:</strong> ${data.correct_answer_text}`;
+        explEl.innerHTML = `<strong>Explanation:</strong> ${data.explanation}`;
+
+        // record the question text to session localStorage to avoid repeating
+        answeredQuestions.push(currentQuestion.question);
+        localStorage.setItem("apt_previous_questions", JSON.stringify(answeredQuestions));
+
+        // show next button (allow user to control pace)
+        document.getElementById("nextBtn").classList.remove("hidden");
+      } catch (err) {
+        console.error("Submit error:", err);
+        alert("Error submitting answer. Try again.");
+        document.getElementById("submitBtn").disabled = false;
+      }
+    }
+
+    document.getElementById("submitBtn").onclick = submitAnswer;
+    document.getElementById("nextBtn").onclick = fetchQuestion;
+    document.getElementById("finishBtn").onclick = async () => {
+      // go to results page or show inline summary by fetching /final_report
+      try {
+        const res = await fetch(`${apiBase}/final_report/${encodeURIComponent(category)}`);
+        const data = await res.json();
+        // show a simple report modal/alert (you can create a nicer page)
+        alert(`Report\nTotal: ${data.total_questions}\nCorrect: ${data.correct_answers}\nScore: ${data.score_percent}%`);
+        // optionally navigate to index
+        window.location.href = "index.html";
+      } catch (err) {
+        console.error(err);
+        alert("Unable to fetch report");
+      }
+    };
+
+    // initial fetch
+    fetchQuestion();
+  </script>
+</body>
+</html>

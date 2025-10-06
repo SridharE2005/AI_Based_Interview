@@ -1,0 +1,15 @@
+# --- Core Framework ---
+fastapi==0.115.2
+uvicorn==0.32.0
+
+# --- Data Models & Validation ---
+pydantic==2.9.2
+
+# --- Environment Variables ---
+python-dotenv==1.0.1
+
+# --- Database (MongoDB) ---
+pymongo==4.10.1
+
+# --- Google Gemini AI Integration ---
+google-generativeai==0.8.2

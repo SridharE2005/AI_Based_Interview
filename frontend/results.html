@@ -1,0 +1,98 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+<meta charset="UTF-8">
+<meta name="viewport" content="width=device-width, initial-scale=1.0">
+<title>AptitudeAI - Results</title>
+<script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="bg-gradient-to-br from-yellow-400 to-orange-500 min-h-screen flex flex-col items-center p-4">
+  <div class="bg-white rounded-2xl shadow-2xl p-6 w-full max-w-3xl">
+    <h1 class="text-3xl font-bold mb-6 text-yellow-600 text-center">Your Aptitude Results</h1>
+    
+    <div class="mb-4">
+      <p>Total Questions: <span id="totalQuestions"></span></p>
+      <p>Correct Answers: <span id="correctAnswers"></span></p>
+      <p>Score: <span id="score"></span>%</p>
+    </div>
+
+    <div class="mb-4">
+      <h2 class="text-xl font-semibold mb-2">Strengths 💪</h2>
+      <ul id="strengthsList" class="list-disc pl-5"></ul>
+    </div>
+
+    <div class="mb-4">
+      <h2 class="text-xl font-semibold mb-2">Weaknesses ⚠️</h2>
+      <ul id="weaknessesList" class="list-disc pl-5"></ul>
+    </div>
+
+    <div class="mb-4">
+      <h2 class="text-xl font-semibold mb-2">Areas of Improvement 🎯</h2>
+      <ul id="improvementsList" class="list-disc pl-5"></ul>
+    </div>
+
+    <div class="text-center mt-6">
+      <button id="restartBtn" class="bg-yellow-500 text-white px-6 py-2 rounded-lg hover:bg-yellow-700 transition-all">Restart Test</button>
+    </div>
+  </div>
+
+  <script>
+    const userAnswers = JSON.parse(localStorage.getItem("userAnswers") || "[]");
+    const userId = localStorage.getItem("userId");
+
+    async function submitAnswersAndFetchResults() {
+      try {
+        for (let ans of userAnswers) {
+          await fetch("http://127.0.0.1:8000/submit_answer", {
+            method: "POST",
+            headers: {"Content-Type": "application/json"},
+            body: JSON.stringify(ans)
+          });
+        }
+
+        const res = await fetch(`http://127.0.0.1:8000/get_result/${userId}`);
+        const result = await res.json();
+
+        document.getElementById("totalQuestions").textContent = result.total_questions;
+        document.getElementById("correctAnswers").textContent = result.correct_answers;
+        document.getElementById("score").textContent = result.score;
+
+        const strengthsList = document.getElementById("strengthsList");
+        strengthsList.innerHTML = "";
+        for (let s in result.strengths) {
+          const li = document.createElement("li");
+          li.textContent = `${s} (${result.strengths[s]} correct)`;
+          strengthsList.appendChild(li);
+        }
+
+        const weaknessesList = document.getElementById("weaknessesList");
+        weaknessesList.innerHTML = "";
+        for (let w in result.weaknesses) {
+          const li = document.createElement("li");
+          li.textContent = `${w} (${result.weaknesses[w]} correct)`;
+          weaknessesList.appendChild(li);
+        }
+
+        const improvementsList = document.getElementById("improvementsList");
+        improvementsList.innerHTML = "";
+        result.improvements.forEach(topic => {
+          const li = document.createElement("li");
+          li.textContent = topic;
+          improvementsList.appendChild(li);
+        });
+
+      } catch(err) {
+        console.error(err);
+        alert("Error fetching results.");
+      }
+    }
+
+    document.getElementById("restartBtn").onclick = () => {
+      localStorage.removeItem("userAnswers");
+      window.location.href = "index.html";
+    }
+
+    submitAnswersAndFetchResults();
+  </script>
+</body>
+</html>

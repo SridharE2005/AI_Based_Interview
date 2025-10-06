@@ -1,0 +1,36 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+  <meta charset="UTF-8" />
+  <meta name="viewport" content="width=device-width, initial-scale=1.0" />
+  <title>AptitudeAI - Subtopics</title>
+  <script src="https://cdn.tailwindcss.com"></script>
+</head>
+<body class="flex flex-col items-center justify-center min-h-screen bg-gradient-to-br from-purple-600 to-pink-600 text-white p-4">
+  <div class="bg-white text-gray-800 rounded-2xl shadow-2xl p-8 w-full max-w-2xl text-center">
+    <h1 class="text-3xl font-bold mb-6 text-pink-600" id="categoryTitle"></h1>
+    <div id="subtopics" class="flex flex-wrap justify-center gap-4"></div>
+  </div>
+
+  <script>
+    window.onload = function () {
+      const category = localStorage.getItem("selectedCategory");
+      const subtopics = JSON.parse(localStorage.getItem("subtopics") || "[]");
+
+      document.getElementById("categoryTitle").textContent = `Select Subtopic for ${category}`;
+
+      const container = document.getElementById("subtopics");
+      subtopics.forEach((topic) => {
+        const btn = document.createElement("button");
+        btn.textContent = topic;
+        btn.className = "bg-pink-500 text-white px-4 py-2 rounded-lg hover:bg-pink-700 transition-all";
+        btn.onclick = () => {
+          localStorage.setItem("selectedTopic", topic);
+          window.location.href = "questions.html";
+        };
+        container.appendChild(btn);
+      });
+    };
+  </script>
+</body>
+</html>
