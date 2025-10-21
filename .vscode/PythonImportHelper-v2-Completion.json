@@ -1,0 +1,1723 @@
+[
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "Field",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "BaseModel",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "EmailStr",
+        "importPath": "pydantic",
+        "description": "pydantic",
+        "isExtraImport": true,
+        "detail": "pydantic",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Literal",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "Optional",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "List",
+        "importPath": "typing",
+        "description": "typing",
+        "isExtraImport": true,
+        "detail": "typing",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "datetime",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "timedelta",
+        "importPath": "datetime",
+        "description": "datetime",
+        "isExtraImport": true,
+        "detail": "datetime",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "Binary",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "ObjectId",
+        "importPath": "bson",
+        "description": "bson",
+        "isExtraImport": true,
+        "detail": "bson",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Depends",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "File",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "APIRouter",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "UploadFile",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Form",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "HTTPException",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "Request",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "FastAPI",
+        "importPath": "fastapi",
+        "description": "fastapi",
+        "isExtraImport": true,
+        "detail": "fastapi",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "JSONResponse",
+        "importPath": "fastapi.responses",
+        "description": "fastapi.responses",
+        "isExtraImport": true,
+        "detail": "fastapi.responses",
+        "documentation": {}
+    },
+    {
+        "label": "os,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os.",
+        "description": "os.",
+        "detail": "os.",
+        "documentation": {}
+    },
+    {
+        "label": "google.generativeai",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "google.generativeai",
+        "description": "google.generativeai",
+        "detail": "google.generativeai",
+        "documentation": {}
+    },
+    {
+        "label": "asyncio",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "asyncio",
+        "description": "asyncio",
+        "detail": "asyncio",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "utils.auth_utils",
+        "description": "utils.auth_utils",
+        "isExtraImport": true,
+        "detail": "utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "utils.auth_utils",
+        "description": "utils.auth_utils",
+        "isExtraImport": true,
+        "detail": "utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "utils.auth_utils",
+        "description": "utils.auth_utils",
+        "isExtraImport": true,
+        "detail": "utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "importPath": "utils.auth_utils",
+        "description": "utils.auth_utils",
+        "isExtraImport": true,
+        "detail": "utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "importPath": "utils.auth_utils",
+        "description": "utils.auth_utils",
+        "isExtraImport": true,
+        "detail": "utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "aptitude_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "history_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "history_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "history_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "chat_sessions_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "resumes_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "users_collection",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "db",
+        "importPath": "db",
+        "description": "db",
+        "isExtraImport": true,
+        "detail": "db",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionResponse",
+        "importPath": "models.aptitude_model",
+        "description": "models.aptitude_model",
+        "isExtraImport": true,
+        "detail": "models.aptitude_model",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordHasher",
+        "importPath": "argon2",
+        "description": "argon2",
+        "isExtraImport": true,
+        "detail": "argon2",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordHasher",
+        "importPath": "argon2",
+        "description": "argon2",
+        "isExtraImport": true,
+        "detail": "argon2",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordHasher",
+        "importPath": "argon2",
+        "description": "argon2",
+        "isExtraImport": true,
+        "detail": "argon2",
+        "documentation": {}
+    },
+    {
+        "label": "exceptions",
+        "importPath": "argon2",
+        "description": "argon2",
+        "isExtraImport": true,
+        "detail": "argon2",
+        "documentation": {}
+    },
+    {
+        "label": "PasswordHasher",
+        "importPath": "argon2",
+        "description": "argon2",
+        "isExtraImport": true,
+        "detail": "argon2",
+        "documentation": {}
+    },
+    {
+        "label": "randint",
+        "importPath": "random",
+        "description": "random",
+        "isExtraImport": true,
+        "detail": "random",
+        "documentation": {}
+    },
+    {
+        "label": "smtplib,",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "smtplib.",
+        "description": "smtplib.",
+        "detail": "smtplib.",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEText",
+        "importPath": "email.mime.text",
+        "description": "email.mime.text",
+        "isExtraImport": true,
+        "detail": "email.mime.text",
+        "documentation": {}
+    },
+    {
+        "label": "MIMEMultipart",
+        "importPath": "email.mime.multipart",
+        "description": "email.mime.multipart",
+        "isExtraImport": true,
+        "detail": "email.mime.multipart",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "load_dotenv",
+        "importPath": "dotenv",
+        "description": "dotenv",
+        "isExtraImport": true,
+        "detail": "dotenv",
+        "documentation": {}
+    },
+    {
+        "label": "os",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "os",
+        "description": "os",
+        "detail": "os",
+        "documentation": {}
+    },
+    {
+        "label": "uuid",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "uuid",
+        "description": "uuid",
+        "detail": "uuid",
+        "documentation": {}
+    },
+    {
+        "label": "History",
+        "importPath": "models.history_model",
+        "description": "models.history_model",
+        "isExtraImport": true,
+        "detail": "models.history_model",
+        "documentation": {}
+    },
+    {
+        "label": "Chat",
+        "importPath": "models.chat_session",
+        "description": "models.chat_session",
+        "isExtraImport": true,
+        "detail": "models.chat_session",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "importPath": "models.chat_session",
+        "description": "models.chat_session",
+        "isExtraImport": true,
+        "detail": "models.chat_session",
+        "documentation": {}
+    },
+    {
+        "label": "fitz",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "fitz",
+        "description": "fitz",
+        "detail": "fitz",
+        "documentation": {}
+    },
+    {
+        "label": "BytesIO",
+        "importPath": "io",
+        "description": "io",
+        "isExtraImport": true,
+        "detail": "io",
+        "documentation": {}
+    },
+    {
+        "label": "Document",
+        "importPath": "docx",
+        "description": "docx",
+        "isExtraImport": true,
+        "detail": "docx",
+        "documentation": {}
+    },
+    {
+        "label": "exists",
+        "importPath": "models.resume_model import ResumeStorage  # ✅ Make sure this",
+        "description": "models.resume_model import ResumeStorage  # ✅ Make sure this",
+        "isExtraImport": true,
+        "detail": "models.resume_model import ResumeStorage  # ✅ Make sure this",
+        "documentation": {}
+    },
+    {
+        "label": "base64",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "base64",
+        "description": "base64",
+        "detail": "base64",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "importPath": "models.user_model",
+        "description": "models.user_model",
+        "isExtraImport": true,
+        "detail": "models.user_model",
+        "documentation": {}
+    },
+    {
+        "label": "EmailMessage",
+        "importPath": "email.message",
+        "description": "email.message",
+        "isExtraImport": true,
+        "detail": "email.message",
+        "documentation": {}
+    },
+    {
+        "label": "jwt",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "jwt",
+        "description": "jwt",
+        "detail": "jwt",
+        "documentation": {}
+    },
+    {
+        "label": "MongoClient",
+        "importPath": "pymongo",
+        "description": "pymongo",
+        "isExtraImport": true,
+        "detail": "pymongo",
+        "documentation": {}
+    },
+    {
+        "label": "CORSMiddleware",
+        "importPath": "fastapi.middleware.cors",
+        "description": "fastapi.middleware.cors",
+        "isExtraImport": true,
+        "detail": "fastapi.middleware.cors",
+        "documentation": {}
+    },
+    {
+        "label": "signup",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "signin",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "forgot_password",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "resume_analyze",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "mock_interview_chatbot",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "dashboard",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "settings",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "aptitude_questions",
+        "importPath": "routes",
+        "description": "routes",
+        "isExtraImport": true,
+        "detail": "routes",
+        "documentation": {}
+    },
+    {
+        "label": "json",
+        "kind": 6,
+        "isExtraImport": true,
+        "importPath": "json",
+        "description": "json",
+        "detail": "json",
+        "documentation": {}
+    },
+    {
+        "label": "QuestionResponse",
+        "kind": 6,
+        "importPath": "backend.models.aptitude_model",
+        "description": "backend.models.aptitude_model",
+        "peekOfCode": "class QuestionResponse(BaseModel):\n    questionText: str                     # The question text\n    optionA: str\n    optionB: str\n    optionC: str\n    optionD: str\n    correctAnswer: str                    # Correct option (A/B/C/D)\n    userAnswer: Optional[str] = None      # User's selected option (A/B/C/D)\n    isCorrect: Optional[bool] = None      # True if correct, False otherwise\n    timeTaken: Optional[int] = 0          # Time taken in seconds",
+        "detail": "backend.models.aptitude_model",
+        "documentation": {}
+    },
+    {
+        "label": "AptitudeTestModel",
+        "kind": 6,
+        "importPath": "backend.models.aptitude_model",
+        "description": "backend.models.aptitude_model",
+        "peekOfCode": "class AptitudeTestModel(BaseModel):\n    userId: str                           # Reference to Users._id\n    testId: str                           # UUID for the test session\n    questionType: str                     # e.g., Quantitative, Verbal, Reasoning\n    difficulty: str                       # Easy, Medium, Hard\n    totalQuestions: int                   # Total questions generated\n    totalScore: Optional[int] = 0         # Total score obtained\n    timePerQuestion: int                  # Allotted time per question (seconds)\n    questions: List[QuestionResponse] = []  # List of questions with responses\n    startedAt: datetime = Field(default_factory=datetime.utcnow)",
+        "detail": "backend.models.aptitude_model",
+        "documentation": {}
+    },
+    {
+        "label": "Interaction",
+        "kind": 6,
+        "importPath": "backend.models.chat_session",
+        "description": "backend.models.chat_session",
+        "peekOfCode": "class Interaction(BaseModel):\n    question: str\n    answer: str\n    feedback: str\n    score: int\n    timestamp: datetime = Field(default_factory=datetime.utcnow)\nclass Chat(BaseModel):\n    userId: str   # Reference to Users._id (store as string/ObjectId)\n    sessionId: str\n    startedAt: datetime = Field(default_factory=datetime.utcnow)",
+        "detail": "backend.models.chat_session",
+        "documentation": {}
+    },
+    {
+        "label": "Chat",
+        "kind": 6,
+        "importPath": "backend.models.chat_session",
+        "description": "backend.models.chat_session",
+        "peekOfCode": "class Chat(BaseModel):\n    userId: str   # Reference to Users._id (store as string/ObjectId)\n    sessionId: str\n    startedAt: datetime = Field(default_factory=datetime.utcnow)\n    endedAt: Optional[datetime] = None\n    overallScore: int = 0\n    overallFeedback: Optional[str] = None\n    interactions: List[Interaction] = []",
+        "detail": "backend.models.chat_session",
+        "documentation": {}
+    },
+    {
+        "label": "History",
+        "kind": 6,
+        "importPath": "backend.models.history_model",
+        "description": "backend.models.history_model",
+        "peekOfCode": "class History(BaseModel):\n    userId: str  \n    interviewType: str \n    score: float  \n    timestamp: datetime = Field(default_factory=datetime.utcnow)  \n    feedback: Optional[str] = None",
+        "detail": "backend.models.history_model",
+        "documentation": {}
+    },
+    {
+        "label": "ResumeStorage",
+        "kind": 6,
+        "importPath": "backend.models.resume_model",
+        "description": "backend.models.resume_model",
+        "peekOfCode": "class ResumeStorage(BaseModel):\n    userId: str  \n    fileName: str \n    fileType: Literal[\"pdf\", \"doc\", \"docx\"]  \n    fileData: bytes \n    uploadedAt: datetime = Field(default_factory=datetime.utcnow)  \n    description: Optional[str] = None",
+        "detail": "backend.models.resume_model",
+        "documentation": {}
+    },
+    {
+        "label": "ProfileImage",
+        "kind": 6,
+        "importPath": "backend.models.user_model",
+        "description": "backend.models.user_model",
+        "peekOfCode": "class ProfileImage(BaseModel):\n    data: Optional[bytes] = None        # Raw binary data (stored as Buffer in MongoDB)\n    contentType: Optional[str] = None   # e.g. \"image/jpeg\", \"image/png\"\nclass User(BaseModel):\n    first_name: str\n    last_name: str\n    email: EmailStr\n    phone_number: str\n    password: str\n    total_interviews: int = 0",
+        "detail": "backend.models.user_model",
+        "documentation": {}
+    },
+    {
+        "label": "User",
+        "kind": 6,
+        "importPath": "backend.models.user_model",
+        "description": "backend.models.user_model",
+        "peekOfCode": "class User(BaseModel):\n    first_name: str\n    last_name: str\n    email: EmailStr\n    phone_number: str\n    password: str\n    total_interviews: int = 0\n    skills: str = \"\"\n    technical_interview: Optional[int] = 0\n    aptitude_interview: Optional[int] = 0",
+        "detail": "backend.models.user_model",
+        "documentation": {}
+    },
+    {
+        "label": "AptitudeTestRequest",
+        "kind": 6,
+        "importPath": "backend.routes.aptitude_questions",
+        "description": "backend.routes.aptitude_questions",
+        "peekOfCode": "class AptitudeTestRequest(BaseModel):\n    questionType: str\n    difficulty: str\n    totalQuestions: int\n    timePerQuestion: int\n    topics: list[str] = []  # <-- NEW FIELD for topic-based generation\nclass AnswerSubmitRequest(BaseModel):\n    testId: str\n    questionText: str\n    optionA: str",
+        "detail": "backend.routes.aptitude_questions",
+        "documentation": {}
+    },
+    {
+        "label": "AnswerSubmitRequest",
+        "kind": 6,
+        "importPath": "backend.routes.aptitude_questions",
+        "description": "backend.routes.aptitude_questions",
+        "peekOfCode": "class AnswerSubmitRequest(BaseModel):\n    testId: str\n    questionText: str\n    optionA: str\n    optionB: str\n    optionC: str\n    optionD: str\n    correctAnswer: str\n    explanation: str\n    selectedOption: str",
+        "detail": "backend.routes.aptitude_questions",
+        "documentation": {}
+    },
+    {
+        "label": "generate_questions_by_topics",
+        "kind": 2,
+        "importPath": "backend.routes.aptitude_questions",
+        "description": "backend.routes.aptitude_questions",
+        "peekOfCode": "def generate_questions_by_topics(question_type: str, difficulty: str, topics: list[str], total_questions: int):\n    model = genai.GenerativeModel(\"gemini-2.5-flash-lite\")\n    # Handle empty topics gracefully\n    topics_str = \", \".join(topics) if topics else \"general aptitude topics\"\n    # Improved prompt for stricter topic and difficulty control\n    prompt = f\"\"\"\n    You are an expert aptitude test question generator.\n    Generate exactly {total_questions} multiple-choice questions of **{difficulty}** difficulty level \n    from the \"{question_type}\" category. \n    The questions must be **strictly based only on the following topics**: {topics_str}.",
+        "detail": "backend.routes.aptitude_questions",
+        "documentation": {}
+    },
+    {
+        "label": "calculate_score",
+        "kind": 2,
+        "importPath": "backend.routes.aptitude_questions",
+        "description": "backend.routes.aptitude_questions",
+        "peekOfCode": "def calculate_score(is_correct: bool, time_taken: int, time_per_question: int) -> int:\n    if is_correct:\n        time_ratio = time_taken / time_per_question\n        if time_ratio <= 0.5:\n            return 9 + int((0.5 - time_ratio) * 2)\n        elif time_ratio <= 0.8:\n            return 6 + int((0.8 - time_ratio) * 10 / 3)\n        else:\n            return 5\n    else:",
+        "detail": "backend.routes.aptitude_questions",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.aptitude_questions",
+        "description": "backend.routes.aptitude_questions",
+        "peekOfCode": "router = APIRouter(prefix=\"/aptitude\", tags=[\"Aptitude Test\"])\n# ------------------------------\n# Gemini API setup\n# ------------------------------\nAPI_KEY = os.getenv(\"GEMINI_APTITUDE_API\")\nif not API_KEY:\n    raise RuntimeError(\"GEMINI_APTITUDE_API not found in .env\")\ngenai.configure(api_key=API_KEY)\n# ------------------------------\n# Pydantic Models",
+        "detail": "backend.routes.aptitude_questions",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "backend.routes.aptitude_questions",
+        "description": "backend.routes.aptitude_questions",
+        "peekOfCode": "API_KEY = os.getenv(\"GEMINI_APTITUDE_API\")\nif not API_KEY:\n    raise RuntimeError(\"GEMINI_APTITUDE_API not found in .env\")\ngenai.configure(api_key=API_KEY)\n# ------------------------------\n# Pydantic Models\n# ------------------------------\nclass AptitudeTestRequest(BaseModel):\n    questionType: str\n    difficulty: str",
+        "detail": "backend.routes.aptitude_questions",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.dashboard",
+        "description": "backend.routes.dashboard",
+        "peekOfCode": "router = APIRouter(prefix=\"/user\", tags=[\"User\"])\n@router.get(\"/dashboard\")\nasync def get_dashboard(current_user: dict = Depends(get_current_user)):\n    user_id = ObjectId(current_user.get(\"id\"))\n    # Fetch user document\n    user_doc = users_collection.find_one({\"_id\": user_id})\n    if not user_doc:\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    # Compute total interviews (sum of technical + aptitude)\n    total_interviews = user_doc.get(\"total_interviews\", 0)",
+        "detail": "backend.routes.dashboard",
+        "documentation": {}
+    },
+    {
+        "label": "EmailRequest",
+        "kind": 6,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "class EmailRequest(BaseModel):\n    email_id: EmailStr\nclass OTPRequest(BaseModel):\n    email_id: EmailStr\n    otp: str\nclass ResetPasswordRequest(BaseModel):\n    email_id: EmailStr\n    password: str\n# Email sending function\ndef send_email(recipient: str, subject: str, body: str):",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "OTPRequest",
+        "kind": 6,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "class OTPRequest(BaseModel):\n    email_id: EmailStr\n    otp: str\nclass ResetPasswordRequest(BaseModel):\n    email_id: EmailStr\n    password: str\n# Email sending function\ndef send_email(recipient: str, subject: str, body: str):\n    sender_email = os.getenv(\"EMAIL_ADDRESS\")\n    sender_pass = os.getenv(\"EMAIL_PASSWORD\")",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "ResetPasswordRequest",
+        "kind": 6,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "class ResetPasswordRequest(BaseModel):\n    email_id: EmailStr\n    password: str\n# Email sending function\ndef send_email(recipient: str, subject: str, body: str):\n    sender_email = os.getenv(\"EMAIL_ADDRESS\")\n    sender_pass = os.getenv(\"EMAIL_PASSWORD\")\n    smtp_server = os.getenv(\"SMTP_SERVER\", \"smtp.gmail.com\")\n    smtp_port = int(os.getenv(\"SMTP_PORT\", 587))\n    msg = MIMEMultipart()",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "send_email",
+        "kind": 2,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "def send_email(recipient: str, subject: str, body: str):\n    sender_email = os.getenv(\"EMAIL_ADDRESS\")\n    sender_pass = os.getenv(\"EMAIL_PASSWORD\")\n    smtp_server = os.getenv(\"SMTP_SERVER\", \"smtp.gmail.com\")\n    smtp_port = int(os.getenv(\"SMTP_PORT\", 587))\n    msg = MIMEMultipart()\n    msg[\"From\"] = sender_email\n    msg[\"To\"] = recipient\n    msg[\"Subject\"] = subject\n    msg.attach(MIMEText(body, \"plain\"))",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp",
+        "kind": 2,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "def send_otp(data: EmailRequest):\n    user = users_collection.find_one({\"email\": data.email_id})\n    if not user:\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    otp = str(randint(100000, 999999))\n    otp_store[data.email_id] = {\n        \"otp\": otp,\n        \"expires_at\": datetime.utcnow() + timedelta(minutes=5)\n    }\n    # Send OTP via email",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "verify_otp",
+        "kind": 2,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "def verify_otp(data: OTPRequest):\n    record = otp_store.get(data.email_id)\n    if not record:\n        raise HTTPException(status_code=400, detail=\"No OTP requested for this email\")\n    if datetime.utcnow() > record[\"expires_at\"]:\n        otp_store.pop(data.email_id, None)\n        raise HTTPException(status_code=400, detail=\"OTP expired\")\n    if data.otp != record[\"otp\"]:\n        raise HTTPException(status_code=400, detail=\"Invalid OTP\")\n    return {\"success\": True, \"message\": \"OTP verified\"}",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "reset_password",
+        "kind": 2,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "def reset_password(data: ResetPasswordRequest):\n    user = users_collection.find_one({\"email\": data.email_id})\n    if not user:\n        raise HTTPException(status_code=404, detail=\"User not found\")\n    # Hash new password\n    hashed_password = ph.hash(data.password)\n    users_collection.update_one(\n        {\"email\": data.email_id},\n        {\"$set\": {\"password\": hashed_password}}\n    )",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "router = APIRouter(prefix=\"/forgot-password\", tags=[\"Forgot Password\"])\nph = PasswordHasher()\n# Temporary in-memory OTP store: {email: {\"otp\": 123456, \"expires_at\": datetime}}\notp_store = {}\n# Pydantic models\nclass EmailRequest(BaseModel):\n    email_id: EmailStr\nclass OTPRequest(BaseModel):\n    email_id: EmailStr\n    otp: str",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "ph",
+        "kind": 5,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "ph = PasswordHasher()\n# Temporary in-memory OTP store: {email: {\"otp\": 123456, \"expires_at\": datetime}}\notp_store = {}\n# Pydantic models\nclass EmailRequest(BaseModel):\n    email_id: EmailStr\nclass OTPRequest(BaseModel):\n    email_id: EmailStr\n    otp: str\nclass ResetPasswordRequest(BaseModel):",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "otp_store",
+        "kind": 5,
+        "importPath": "backend.routes.forgot_password",
+        "description": "backend.routes.forgot_password",
+        "peekOfCode": "otp_store = {}\n# Pydantic models\nclass EmailRequest(BaseModel):\n    email_id: EmailStr\nclass OTPRequest(BaseModel):\n    email_id: EmailStr\n    otp: str\nclass ResetPasswordRequest(BaseModel):\n    email_id: EmailStr\n    password: str",
+        "detail": "backend.routes.forgot_password",
+        "documentation": {}
+    },
+    {
+        "label": "generate_technical_question",
+        "kind": 2,
+        "importPath": "backend.routes.mock_interview_chatbot",
+        "description": "backend.routes.mock_interview_chatbot",
+        "peekOfCode": "def generate_technical_question(skills_text: str):\n    global generated_questions\n    model = genai.GenerativeModel(\"gemini-2.5-flash-lite\")\n    prompt = f\"\"\"\n    Based on the following resume and detected skills:\n{skills_text}\n🎯 Task:\nGenerate exactly **one** unique and relevant **technical interview question** for the candidate.\n⚙️ Rules:\n1. Randomly decide between:",
+        "detail": "backend.routes.mock_interview_chatbot",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.mock_interview_chatbot",
+        "description": "backend.routes.mock_interview_chatbot",
+        "peekOfCode": "router = APIRouter(prefix=\"/mock-interview\", tags=[\"Mock Interview Chatbot\"])\nAPI_KEY = os.getenv(\"GEMINI_MOCK_API_KEY\")\ngenai.configure(api_key=API_KEY)\ngenerated_questions = []  # global question memory\n# ----------------------\n# Generate Technical Question\n# ----------------------\ndef generate_technical_question(skills_text: str):\n    global generated_questions\n    model = genai.GenerativeModel(\"gemini-2.5-flash-lite\")",
+        "detail": "backend.routes.mock_interview_chatbot",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "backend.routes.mock_interview_chatbot",
+        "description": "backend.routes.mock_interview_chatbot",
+        "peekOfCode": "API_KEY = os.getenv(\"GEMINI_MOCK_API_KEY\")\ngenai.configure(api_key=API_KEY)\ngenerated_questions = []  # global question memory\n# ----------------------\n# Generate Technical Question\n# ----------------------\ndef generate_technical_question(skills_text: str):\n    global generated_questions\n    model = genai.GenerativeModel(\"gemini-2.5-flash-lite\")\n    prompt = f\"\"\"",
+        "detail": "backend.routes.mock_interview_chatbot",
+        "documentation": {}
+    },
+    {
+        "label": "generated_questions",
+        "kind": 5,
+        "importPath": "backend.routes.mock_interview_chatbot",
+        "description": "backend.routes.mock_interview_chatbot",
+        "peekOfCode": "generated_questions = []  # global question memory\n# ----------------------\n# Generate Technical Question\n# ----------------------\ndef generate_technical_question(skills_text: str):\n    global generated_questions\n    model = genai.GenerativeModel(\"gemini-2.5-flash-lite\")\n    prompt = f\"\"\"\n    Based on the following resume and detected skills:\n{skills_text}",
+        "detail": "backend.routes.mock_interview_chatbot",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_pdf_bytes",
+        "kind": 2,
+        "importPath": "backend.routes.resume_analyze",
+        "description": "backend.routes.resume_analyze",
+        "peekOfCode": "def extract_text_from_pdf_bytes(pdf_bytes: bytes) -> str:\n    try:\n        doc = fitz.open(stream=pdf_bytes, filetype=\"pdf\")\n        return \"\\n\".join([page.get_text(\"text\") for page in doc]).strip()\n    except Exception as e:\n        raise ValueError(f\"Failed to extract text from PDF: {str(e)}\")\ndef extract_text_from_word_bytes(doc_bytes: bytes) -> str:\n    try:\n        doc = Document(BytesIO(doc_bytes))\n        return \"\\n\".join([para.text for para in doc.paragraphs]).strip()",
+        "detail": "backend.routes.resume_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "extract_text_from_word_bytes",
+        "kind": 2,
+        "importPath": "backend.routes.resume_analyze",
+        "description": "backend.routes.resume_analyze",
+        "peekOfCode": "def extract_text_from_word_bytes(doc_bytes: bytes) -> str:\n    try:\n        doc = Document(BytesIO(doc_bytes))\n        return \"\\n\".join([para.text for para in doc.paragraphs]).strip()\n    except Exception as e:\n        raise ValueError(f\"Failed to extract text from DOCX: {str(e)}\")\n# ----------------------\n# Gemini Resume Analysis\n# ----------------------\ndef extract_resume_data_with_gemini(text: str) -> str:",
+        "detail": "backend.routes.resume_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "extract_resume_data_with_gemini",
+        "kind": 2,
+        "importPath": "backend.routes.resume_analyze",
+        "description": "backend.routes.resume_analyze",
+        "peekOfCode": "def extract_resume_data_with_gemini(text: str) -> str:\n    prompt = f\"\"\"\nYou are a resume parser. Extract the following details from the resume and return in the exact format below:\nFormat:\nJob Role: <Job Role>\nSkills: Programming Languages: <languages>\n        Frameworks: <frameworks>\n        Database: <databases>\n        Technologies/Tools: <tools>\n        Soft Skills: <soft skills>",
+        "detail": "backend.routes.resume_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.resume_analyze",
+        "description": "backend.routes.resume_analyze",
+        "peekOfCode": "router = APIRouter(prefix=\"/upload\", tags=[\"Resume Analysis\"])\n# ----------------------\n# Gemini API setup\n# ----------------------\nAPI_KEY = os.getenv(\"GEMINI_RESUME_API_KEY\")\nif not API_KEY:\n    raise ValueError(\"GEMINI_RESUME_API_KEY not set in .env\")\ngenai.configure(api_key=API_KEY)\n# ----------------------\n# Text Extraction Helpers",
+        "detail": "backend.routes.resume_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "API_KEY",
+        "kind": 5,
+        "importPath": "backend.routes.resume_analyze",
+        "description": "backend.routes.resume_analyze",
+        "peekOfCode": "API_KEY = os.getenv(\"GEMINI_RESUME_API_KEY\")\nif not API_KEY:\n    raise ValueError(\"GEMINI_RESUME_API_KEY not set in .env\")\ngenai.configure(api_key=API_KEY)\n# ----------------------\n# Text Extraction Helpers\n# ----------------------\ndef extract_text_from_pdf_bytes(pdf_bytes: bytes) -> str:\n    try:\n        doc = fitz.open(stream=pdf_bytes, filetype=\"pdf\")",
+        "detail": "backend.routes.resume_analyze",
+        "documentation": {}
+    },
+    {
+        "label": "UpdateProfile",
+        "kind": 6,
+        "importPath": "backend.routes.settings",
+        "description": "backend.routes.settings",
+        "peekOfCode": "class UpdateProfile(BaseModel):\n    first_name: str\n    last_name: str\n    email: EmailStr\n    phone_number: str\nclass ChangePassword(BaseModel):\n    currentPassword: str\n    newPassword: str\n# -------------------- ROUTES --------------------\n@router.put(\"/{user_id}\")",
+        "detail": "backend.routes.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ChangePassword",
+        "kind": 6,
+        "importPath": "backend.routes.settings",
+        "description": "backend.routes.settings",
+        "peekOfCode": "class ChangePassword(BaseModel):\n    currentPassword: str\n    newPassword: str\n# -------------------- ROUTES --------------------\n@router.put(\"/{user_id}\")\nasync def update_profile(user_id: str, profile: UpdateProfile):\n    \"\"\"Update user profile fields\"\"\"\n    db_user = users_collection.find_one({\"_id\": ObjectId(user_id)})\n    if not db_user:\n        raise HTTPException(status_code=404, detail=\"User not found\")",
+        "detail": "backend.routes.settings",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.settings",
+        "description": "backend.routes.settings",
+        "peekOfCode": "router = APIRouter(prefix=\"/settings\", tags=[\"Settings\"])\nph = PasswordHasher()\n# -------------------- MODELS --------------------\nclass UpdateProfile(BaseModel):\n    first_name: str\n    last_name: str\n    email: EmailStr\n    phone_number: str\nclass ChangePassword(BaseModel):\n    currentPassword: str",
+        "detail": "backend.routes.settings",
+        "documentation": {}
+    },
+    {
+        "label": "ph",
+        "kind": 5,
+        "importPath": "backend.routes.settings",
+        "description": "backend.routes.settings",
+        "peekOfCode": "ph = PasswordHasher()\n# -------------------- MODELS --------------------\nclass UpdateProfile(BaseModel):\n    first_name: str\n    last_name: str\n    email: EmailStr\n    phone_number: str\nclass ChangePassword(BaseModel):\n    currentPassword: str\n    newPassword: str",
+        "detail": "backend.routes.settings",
+        "documentation": {}
+    },
+    {
+        "label": "Login",
+        "kind": 6,
+        "importPath": "backend.routes.signin",
+        "description": "backend.routes.signin",
+        "peekOfCode": "class Login(BaseModel):\n    email: EmailStr\n    password: str\n@router.post(\"/signin\")\ndef signin(user: Login):\n    \"\"\"\n    User login route\n    Returns JWT token and user data including profile_image (if available)\n    \"\"\"\n    # Find user by email",
+        "detail": "backend.routes.signin",
+        "documentation": {}
+    },
+    {
+        "label": "signin",
+        "kind": 2,
+        "importPath": "backend.routes.signin",
+        "description": "backend.routes.signin",
+        "peekOfCode": "def signin(user: Login):\n    \"\"\"\n    User login route\n    Returns JWT token and user data including profile_image (if available)\n    \"\"\"\n    # Find user by email\n    db_user = users_collection.find_one({\"email\": user.email})\n    if not db_user:\n        raise HTTPException(status_code=401, detail=\"Invalid email or password\")\n    # Verify password",
+        "detail": "backend.routes.signin",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.signin",
+        "description": "backend.routes.signin",
+        "peekOfCode": "router = APIRouter(prefix=\"/auth\", tags=[\"Auth\"])\nph = PasswordHasher()\nclass Login(BaseModel):\n    email: EmailStr\n    password: str\n@router.post(\"/signin\")\ndef signin(user: Login):\n    \"\"\"\n    User login route\n    Returns JWT token and user data including profile_image (if available)",
+        "detail": "backend.routes.signin",
+        "documentation": {}
+    },
+    {
+        "label": "ph",
+        "kind": 5,
+        "importPath": "backend.routes.signin",
+        "description": "backend.routes.signin",
+        "peekOfCode": "ph = PasswordHasher()\nclass Login(BaseModel):\n    email: EmailStr\n    password: str\n@router.post(\"/signin\")\ndef signin(user: Login):\n    \"\"\"\n    User login route\n    Returns JWT token and user data including profile_image (if available)\n    \"\"\"",
+        "detail": "backend.routes.signin",
+        "documentation": {}
+    },
+    {
+        "label": "send_otp_email",
+        "kind": 2,
+        "importPath": "backend.routes.signup",
+        "description": "backend.routes.signup",
+        "peekOfCode": "def send_otp_email(email: str, otp: str):\n    msg = EmailMessage()\n    msg[\"Subject\"] = \"Your OTP for InterviewAI\"\n    msg[\"From\"] = EMAIL_ADDRESS\n    msg[\"To\"] = email\n    msg.set_content(f\"Your OTP for InterviewAI is: {otp}\")\n    with smtplib.SMTP_SSL(\"smtp.gmail.com\", 465) as smtp:\n        smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)\n        smtp.send_message(msg)\n@router.post(\"/send-otp\")",
+        "detail": "backend.routes.signup",
+        "documentation": {}
+    },
+    {
+        "label": "router",
+        "kind": 5,
+        "importPath": "backend.routes.signup",
+        "description": "backend.routes.signup",
+        "peekOfCode": "router = APIRouter(prefix=\"/auth\", tags=[\"Auth\"])\nph = PasswordHasher()\nEMAIL_ADDRESS = os.getenv(\"EMAIL_ADDRESS\")\nEMAIL_PASSWORD = os.getenv(\"EMAIL_PASSWORD\")\notp_storage = {}\ndef send_otp_email(email: str, otp: str):\n    msg = EmailMessage()\n    msg[\"Subject\"] = \"Your OTP for InterviewAI\"\n    msg[\"From\"] = EMAIL_ADDRESS\n    msg[\"To\"] = email",
+        "detail": "backend.routes.signup",
+        "documentation": {}
+    },
+    {
+        "label": "ph",
+        "kind": 5,
+        "importPath": "backend.routes.signup",
+        "description": "backend.routes.signup",
+        "peekOfCode": "ph = PasswordHasher()\nEMAIL_ADDRESS = os.getenv(\"EMAIL_ADDRESS\")\nEMAIL_PASSWORD = os.getenv(\"EMAIL_PASSWORD\")\notp_storage = {}\ndef send_otp_email(email: str, otp: str):\n    msg = EmailMessage()\n    msg[\"Subject\"] = \"Your OTP for InterviewAI\"\n    msg[\"From\"] = EMAIL_ADDRESS\n    msg[\"To\"] = email\n    msg.set_content(f\"Your OTP for InterviewAI is: {otp}\")",
+        "detail": "backend.routes.signup",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_ADDRESS",
+        "kind": 5,
+        "importPath": "backend.routes.signup",
+        "description": "backend.routes.signup",
+        "peekOfCode": "EMAIL_ADDRESS = os.getenv(\"EMAIL_ADDRESS\")\nEMAIL_PASSWORD = os.getenv(\"EMAIL_PASSWORD\")\notp_storage = {}\ndef send_otp_email(email: str, otp: str):\n    msg = EmailMessage()\n    msg[\"Subject\"] = \"Your OTP for InterviewAI\"\n    msg[\"From\"] = EMAIL_ADDRESS\n    msg[\"To\"] = email\n    msg.set_content(f\"Your OTP for InterviewAI is: {otp}\")\n    with smtplib.SMTP_SSL(\"smtp.gmail.com\", 465) as smtp:",
+        "detail": "backend.routes.signup",
+        "documentation": {}
+    },
+    {
+        "label": "EMAIL_PASSWORD",
+        "kind": 5,
+        "importPath": "backend.routes.signup",
+        "description": "backend.routes.signup",
+        "peekOfCode": "EMAIL_PASSWORD = os.getenv(\"EMAIL_PASSWORD\")\notp_storage = {}\ndef send_otp_email(email: str, otp: str):\n    msg = EmailMessage()\n    msg[\"Subject\"] = \"Your OTP for InterviewAI\"\n    msg[\"From\"] = EMAIL_ADDRESS\n    msg[\"To\"] = email\n    msg.set_content(f\"Your OTP for InterviewAI is: {otp}\")\n    with smtplib.SMTP_SSL(\"smtp.gmail.com\", 465) as smtp:\n        smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)",
+        "detail": "backend.routes.signup",
+        "documentation": {}
+    },
+    {
+        "label": "otp_storage",
+        "kind": 5,
+        "importPath": "backend.routes.signup",
+        "description": "backend.routes.signup",
+        "peekOfCode": "otp_storage = {}\ndef send_otp_email(email: str, otp: str):\n    msg = EmailMessage()\n    msg[\"Subject\"] = \"Your OTP for InterviewAI\"\n    msg[\"From\"] = EMAIL_ADDRESS\n    msg[\"To\"] = email\n    msg.set_content(f\"Your OTP for InterviewAI is: {otp}\")\n    with smtplib.SMTP_SSL(\"smtp.gmail.com\", 465) as smtp:\n        smtp.login(EMAIL_ADDRESS, EMAIL_PASSWORD)\n        smtp.send_message(msg)",
+        "detail": "backend.routes.signup",
+        "documentation": {}
+    },
+    {
+        "label": "create_access_token",
+        "kind": 2,
+        "importPath": "backend.utils.auth_utils",
+        "description": "backend.utils.auth_utils",
+        "peekOfCode": "def create_access_token(data: dict):\n    payload = data.copy()\n    payload[\"exp\"] = datetime.utcnow() + timedelta(minutes=JWT_EXP_DELTA_MINUTES)\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)\n    return token\ndef verify_token(token: str):\n    try:\n        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])\n        return payload\n    except jwt.ExpiredSignatureError:",
+        "detail": "backend.utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "verify_token",
+        "kind": 2,
+        "importPath": "backend.utils.auth_utils",
+        "description": "backend.utils.auth_utils",
+        "peekOfCode": "def verify_token(token: str):\n    try:\n        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])\n        return payload\n    except jwt.ExpiredSignatureError:\n        raise HTTPException(status_code=401, detail=\"Token expired\")\n    except jwt.InvalidTokenError:\n        raise HTTPException(status_code=401, detail=\"Invalid token\")\n# Optional: dependency for FastAPI routes\ndef get_current_user(request: Request):",
+        "detail": "backend.utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "get_current_user",
+        "kind": 2,
+        "importPath": "backend.utils.auth_utils",
+        "description": "backend.utils.auth_utils",
+        "peekOfCode": "def get_current_user(request: Request):\n    token = request.headers.get(\"Authorization\")\n    if not token:\n        raise HTTPException(status_code=401, detail=\"Authorization header missing\")\n    if token.startswith(\"Bearer \"):\n        token = token[len(\"Bearer \"):]\n    return verify_token(token)",
+        "detail": "backend.utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "JWT_SECRET",
+        "kind": 5,
+        "importPath": "backend.utils.auth_utils",
+        "description": "backend.utils.auth_utils",
+        "peekOfCode": "JWT_SECRET = os.getenv(\"JWT_SECRET\")\nJWT_ALGORITHM = \"HS256\"\nJWT_EXP_DELTA_MINUTES = 60\ndef create_access_token(data: dict):\n    payload = data.copy()\n    payload[\"exp\"] = datetime.utcnow() + timedelta(minutes=JWT_EXP_DELTA_MINUTES)\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)\n    return token\ndef verify_token(token: str):\n    try:",
+        "detail": "backend.utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "JWT_ALGORITHM",
+        "kind": 5,
+        "importPath": "backend.utils.auth_utils",
+        "description": "backend.utils.auth_utils",
+        "peekOfCode": "JWT_ALGORITHM = \"HS256\"\nJWT_EXP_DELTA_MINUTES = 60\ndef create_access_token(data: dict):\n    payload = data.copy()\n    payload[\"exp\"] = datetime.utcnow() + timedelta(minutes=JWT_EXP_DELTA_MINUTES)\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)\n    return token\ndef verify_token(token: str):\n    try:\n        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])",
+        "detail": "backend.utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "JWT_EXP_DELTA_MINUTES",
+        "kind": 5,
+        "importPath": "backend.utils.auth_utils",
+        "description": "backend.utils.auth_utils",
+        "peekOfCode": "JWT_EXP_DELTA_MINUTES = 60\ndef create_access_token(data: dict):\n    payload = data.copy()\n    payload[\"exp\"] = datetime.utcnow() + timedelta(minutes=JWT_EXP_DELTA_MINUTES)\n    token = jwt.encode(payload, JWT_SECRET, algorithm=JWT_ALGORITHM)\n    return token\ndef verify_token(token: str):\n    try:\n        payload = jwt.decode(token, JWT_SECRET, algorithms=[JWT_ALGORITHM])\n        return payload",
+        "detail": "backend.utils.auth_utils",
+        "documentation": {}
+    },
+    {
+        "label": "MONGO_URI",
+        "kind": 5,
+        "importPath": "backend.db",
+        "description": "backend.db",
+        "peekOfCode": "MONGO_URI = os.getenv(\"MONGO_URI\", \"mongodb://localhost:27017/\")\nDB_NAME = os.getenv(\"DB_NAME\", \"interview_platform\")\ntry:\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    # Collections\n    users_collection = db[\"users\"]\n    chat_sessions_collection = db[\"chat_sessions\"]\n    history_collection = db[\"history\"]\n    resumes_collection = db[\"resumes\"]",
+        "detail": "backend.db",
+        "documentation": {}
+    },
+    {
+        "label": "DB_NAME",
+        "kind": 5,
+        "importPath": "backend.db",
+        "description": "backend.db",
+        "peekOfCode": "DB_NAME = os.getenv(\"DB_NAME\", \"interview_platform\")\ntry:\n    client = MongoClient(MONGO_URI)\n    db = client[DB_NAME]\n    # Collections\n    users_collection = db[\"users\"]\n    chat_sessions_collection = db[\"chat_sessions\"]\n    history_collection = db[\"history\"]\n    resumes_collection = db[\"resumes\"]\n    # ✅ New collection for storing aptitude test data",
+        "detail": "backend.db",
+        "documentation": {}
+    },
+    {
+        "label": "root",
+        "kind": 2,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "def root():\n    if db:\n        return {\"message\": \"Backend is running 🚀\", \"db_status\": \"✅ MongoDB connected\"}\n    else:\n        return {\"message\": \"Backend is running 🚀\", \"db_status\": \"❌ MongoDB not connected\"}",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "app",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "app = FastAPI(title=\"Interview Prep Backend\")\n# ------------------------\n# CORS Configuration\n# ------------------------\norigins = [\n    \"http://localhost:5173\",  # React dev server\n    # Add other origins if needed\n]\napp.add_middleware(\n    CORSMiddleware,",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "origins",
+        "kind": 5,
+        "importPath": "backend.main",
+        "description": "backend.main",
+        "peekOfCode": "origins = [\n    \"http://localhost:5173\",  # React dev server\n    # Add other origins if needed\n]\napp.add_middleware(\n    CORSMiddleware,\n    allow_origins=origins,      # allow these origins\n    allow_credentials=True,\n    allow_methods=[\"*\"],        # allow all HTTP methods\n    allow_headers=[\"*\"],        # allow all headers",
+        "detail": "backend.main",
+        "documentation": {}
+    },
+    {
+        "label": "_Known",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _Known:\n    def __init__(self):\n        self.key = []\n        self.value = []\nclass _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "_String",
+        "kind": 6,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "class _String:\n    def __init__(self, value):\n        self.value = value\ndef _array_keys(value):\n    keys = []\n    i = 0\n    for _ in value:\n        keys.append(i)\n        i += 1\n    return keys",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "parse",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def parse(value, *args, **kwargs):\n    json = _json.loads(value, *args, **kwargs)\n    wrapped = []\n    for value in json:\n        wrapped.append(_wrap(value))\n    input = []\n    for value in wrapped:\n        if isinstance(value, _String):\n            input.append(value.value)\n        else:",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    },
+    {
+        "label": "stringify",
+        "kind": 2,
+        "importPath": "frontend.node_modules.flatted.python.flatted",
+        "description": "frontend.node_modules.flatted.python.flatted",
+        "peekOfCode": "def stringify(value, *args, **kwargs):\n    known = _Known()\n    input = []\n    output = []\n    i = int(_index(known, input, value))\n    while i < len(input):\n        output.append(_transform(known, input, input[i]))\n        i += 1\n    return _json.dumps(output, *args, **kwargs)",
+        "detail": "frontend.node_modules.flatted.python.flatted",
+        "documentation": {}
+    }
+]
