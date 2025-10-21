@@ -2,8 +2,10 @@ import React, { useState, useEffect } from "react";
 import { useNavigate } from "react-router-dom";
 import { FaUpload, FaCheckCircle, FaArrowLeft } from "react-icons/fa";
 import axios from "axios";
+import LoadingOverlay from "../components/LoadingOverlay";
 
 const ResumeUpload = () => {
+  const [loading , setLoading]=useState(false);
   const [documentFile, setDocumentFile] = useState(null);
   const [isAnalyzing, setIsAnalyzing] = useState(false);
   const [uploadSuccess, setUploadSuccess] = useState(false);
@@ -74,6 +76,7 @@ const ResumeUpload = () => {
     }
 
     setIsAnalyzing(true);
+    setLoading(true)
     const formData = new FormData();
     formData.append("file", documentFile);
 
@@ -99,6 +102,7 @@ const ResumeUpload = () => {
       alert("Failed to analyze the document");
     } finally {
       setIsAnalyzing(false);
+      setLoading(false)
     }
   };
 
@@ -115,6 +119,9 @@ const ResumeUpload = () => {
 
   return (
     <div className="flex flex-col items-center justify-center min-h-screen bg-[#0B0F1A] text-white px-6 relative">
+
+      {loading && <LoadingOverlay message="Analyzing..." subMessage="Please wait" />}
+
       {/* Back Button */}
       <button
         onClick={() => navigate("/options")}
@@ -123,6 +130,7 @@ const ResumeUpload = () => {
         <FaArrowLeft className="mr-2 text-lg" />
         <span className="text-sm font-medium">Back to Options</span>
       </button>
+
 
       {/* Resume Upload Container */}
       <div className="bg-gray-800 p-12 rounded-2xl shadow-2xl w-full max-w-5xl text-center min-h-[75vh] flex flex-col justify-center">

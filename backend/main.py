@@ -5,6 +5,9 @@ from routes import signin
 from routes import forgot_password
 from routes import resume_analyze
 from routes import mock_interview_chatbot
+from routes import dashboard
+from routes import settings
+from routes import aptitude_questions
 from db import db  # just to check connection
 
 app = FastAPI(title="Interview Prep Backend")
@@ -33,6 +36,10 @@ app.include_router(signin.router)
 app.include_router(forgot_password.router)
 app.include_router(resume_analyze.router)
 app.include_router(mock_interview_chatbot.router)
+app.include_router(dashboard.router)
+app.include_router(settings.router)
+app.include_router(aptitude_questions.router)
+
 
 @app.get("/")
 def root():

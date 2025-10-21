@@ -2,6 +2,7 @@ import React, { useState, useEffect } from "react";
 import { FaBrain, FaChartLine, FaBolt, FaClipboardList } from "react-icons/fa";
 import { useNavigate } from "react-router-dom";
 import { decodeJwt } from "jose"; // JWT decode
+import SystemLogo from "../assets/SystemLogo.png"
 
 const Home = () => {
   const [user, setUser] = useState(null);
@@ -15,10 +16,9 @@ const Home = () => {
     if (!token || !storedUser) return;
 
     try {
-      const decoded = decodeJwt(token); // Decode JWT
+      const decoded = decodeJwt(token);
       const currentTime = Math.floor(Date.now() / 1000);
 
-      // If token expired, clear storage
       if (!decoded.exp || decoded.exp < currentTime) {
         localStorage.removeItem("token");
         localStorage.removeItem("user");
@@ -30,7 +30,6 @@ const Home = () => {
         return;
       }
 
-      // Token valid, set user
       setUser(JSON.parse(storedUser));
     } catch (error) {
       console.error("Invalid token:", error);
@@ -47,7 +46,7 @@ const Home = () => {
     localStorage.removeItem("user");
     localStorage.removeItem("token");
     localStorage.removeItem("completedOptions");
-localStorage.removeItem("completedResume");
+    localStorage.removeItem("completedResume");
 
     setUser(null);
     setShowProfile(false);
@@ -60,13 +59,38 @@ localStorage.removeItem("completedResume");
     return `${first}${last}`.toUpperCase();
   };
 
+  const getProfileContent = (user) => {
+    if (!user) return null;
+
+    if (user.profile_image) {
+      console.log(user.profile_image)
+      return (
+       <img
+  src={user.profile_image}
+  alt="Profile"
+  className="w-10 h-10 rounded-full object-cover"
+/>
+      );
+    } else {
+      return (
+        <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-semibold text-white">
+          {getInitials(user)}
+        </div>
+      );
+    }
+  };
+
   return (
     <div className="bg-[#0B0F1A] text-white min-h-screen flex flex-col">
       {/* Navbar */}
       <nav className="flex justify-between items-center px-8 py-4 bg-[#111827] shadow-lg">
-        <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-          InterviewAI
+        <div className="flex gap-1">
+          <h1 className="text-2xl font-bold text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
+          TechTalkAI
         </h1>
+        <img src={SystemLogo} alt="" width={35} height={35} />
+        </div>
+        
 
         <div className="flex items-center gap-6">
           {!user ? (
@@ -90,9 +114,7 @@ localStorage.removeItem("completedResume");
                 onClick={() => setShowProfile(!showProfile)}
                 className="flex items-center gap-2 px-4 py-2 bg-gray-800 hover:bg-gray-700 rounded-lg transition shadow-md hover:shadow-xl"
               >
-                <div className="w-8 h-8 rounded-full bg-purple-600 flex items-center justify-center font-semibold text-white">
-                  {getInitials(user)}
-                </div>
+                {getProfileContent(user)}
                 <span className="font-medium">{user.first_name}</span>
               </button>
 
@@ -105,7 +127,7 @@ localStorage.removeItem("completedResume");
                     >
                       My Dashboard
                     </li>
-                    <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer">
+                    <li className="px-4 py-2 hover:bg-gray-700 cursor-pointer" onClick={() => navigate("/settings")}>
                       Settings
                     </li>
                     <li
@@ -141,7 +163,7 @@ localStorage.removeItem("completedResume");
       {/* Why Choose Section */}
       <section className="py-16 px-6 max-w-6xl mx-auto">
         <h2 className="text-3xl md:text-4xl font-bold text-center mb-12">
-          Why Choose <span className="text-blue-400">InterviewAI?</span>
+          Why Choose <span className="text-blue-400">TechTalkAI?</span>
         </h2>
 
         <div className="grid grid-cols-1 md:grid-cols-2 lg:grid-cols-4 gap-8">

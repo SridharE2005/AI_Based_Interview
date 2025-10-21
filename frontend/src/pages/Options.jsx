@@ -12,6 +12,11 @@ const Options = () => {
     navigate("/resume-upload"); // go to Resume Upload page
   };
 
+   const handleAptitudeClick = () => {
+    localStorage.setItem("completedOptions", "true"); // mark step as completed
+    navigate("/aptitude"); // go to Resume Upload page
+  };
+
   return (
     <div className="bg-[#0B0F1A] min-h-screen flex flex-col items-center p-4 font-sans relative">
       
@@ -58,7 +63,8 @@ const Options = () => {
         </div>
 
         {/* Aptitude Test Card */}
-        <div className="bg-[#0B0F1A] p-8 rounded-xl border border-slate-700 flex flex-col items-center gap-6 w-full md:w-96 text-center">
+        <div className="bg-[#0B0F1A] p-8 rounded-xl border border-slate-700 flex flex-col items-center gap-6 w-full md:w-96 text-center hover:scale-105 transition-transform"
+         onClick={handleAptitudeClick}>
           <div className="bg-cyan-500 p-4 rounded-lg">
             <FaBrain className="text-white text-4xl" />
           </div>
@@ -68,7 +74,7 @@ const Options = () => {
           <p className="text-gray-400">
             Sharpen your problem-solving and analytical skills
           </p>
-          <button className="w-full bg-cyan-500 text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity mt-4">
+          <button onClick={handleAptitudeClick} className="w-full bg-cyan-500 text-white font-semibold py-3 px-6 rounded-lg hover:opacity-90 transition-opacity mt-4">
             Start Practice
           </button>
         </div>

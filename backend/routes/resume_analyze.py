@@ -6,15 +6,18 @@ from io import BytesIO
 from docx import Document
 import google.generativeai as genai
 from dotenv import load_dotenv
-from utils.auth_utils import get_current_user  # JWT dependency
-from bson import ObjectId
-from db import users_collection  # MongoDB collection
+from utils.auth_utils import get_current_user
+from bson import ObjectId, Binary  # ✅ Binary is important for MongoDB
+from db import users_collection, resumes_collection
+from models.resume_model import ResumeStorage  # ✅ Make sure this import exists
 
 load_dotenv()
 
 router = APIRouter(prefix="/upload", tags=["Resume Analysis"])
 
+# ----------------------
 # Gemini API setup
+# ----------------------
 API_KEY = os.getenv("GEMINI_RESUME_API_KEY")
 if not API_KEY:
     raise ValueError("GEMINI_RESUME_API_KEY not set in .env")
@@ -22,7 +25,7 @@ genai.configure(api_key=API_KEY)
 
 
 # ----------------------
-# Text Extraction
+# Text Extraction Helpers
 # ----------------------
 def extract_text_from_pdf_bytes(pdf_bytes: bytes) -> str:
     try:
@@ -41,7 +44,7 @@ def extract_text_from_word_bytes(doc_bytes: bytes) -> str:
 
 
 # ----------------------
-# Send text to Gemini API
+# Gemini Resume Analysis
 # ----------------------
 def extract_resume_data_with_gemini(text: str) -> str:
     prompt = f"""
@@ -74,74 +77,85 @@ Important:
 
 
 # ----------------------
-# Protected FastAPI endpoint
+# Protected FastAPI Endpoint
 # ----------------------
 @router.post("/")
 async def upload_resume(
     file: UploadFile = File(...),
-    current_user: dict = Depends(get_current_user)  # JWT validation
+    current_user: dict = Depends(get_current_user)
 ):
-    """
-    Upload a resume for analysis.
-    JWT token must be provided in the Authorization header:
-    Authorization: Bearer <token>
-    """
     if not file.filename:
         raise HTTPException(status_code=400, detail="No file selected")
 
     filename = file.filename
     _, extension = os.path.splitext(filename)
+    extension = extension.lower().replace(".", "")
 
-    # Read file in memory
+    if extension not in ["pdf", "doc", "docx"]:
+        raise HTTPException(
+            status_code=400,
+            detail="Invalid file format. Only PDF and Word files are supported."
+        )
+
+    # Read file content
     try:
         file_bytes = await file.read()
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to read file: {str(e)}")
 
-    # Extract text based on file type
+    # Extract text
     try:
-        if extension.lower() == ".pdf":
-            extracted_text = extract_text_from_pdf_bytes(file_bytes)
-        elif extension.lower() in [".doc", ".docx"]:
-            extracted_text = extract_text_from_word_bytes(file_bytes)
-        else:
-            raise HTTPException(
-                status_code=400,
-                detail="Invalid file format. Only PDF and Word files are supported."
-            )
+        extracted_text = (
+            extract_text_from_pdf_bytes(file_bytes)
+            if extension == "pdf"
+            else extract_text_from_word_bytes(file_bytes)
+        )
     except ValueError as e:
         raise HTTPException(status_code=500, detail=str(e))
 
     if not extracted_text:
-        raise HTTPException(status_code=500, detail="Failed to extract text from the resume.")
+        raise HTTPException(status_code=500, detail="Failed to extract text from resume.")
 
-    # Send text to Gemini for analysis
+    # Gemini analysis
     try:
         analysis = extract_resume_data_with_gemini(extracted_text)
     except ValueError as e:
-        raise HTTPException(status_code=500, detail=f"Failed to analyze resume with Gemini: {str(e)}")
+        raise HTTPException(status_code=500, detail=f"Failed to analyze resume: {str(e)}")
 
-    # ----------------------
-    # Store in MongoDB (User.skills field)
-    # ----------------------
+    # ✅ Store resume binary in MongoDB
+    try:
+        resume_entry = ResumeStorage(
+            userId=current_user["id"],
+            fileName=filename,
+            fileType=extension,
+            fileData=file_bytes,
+            description="Uploaded resume for Gemini analysis"
+        )
+
+        resume_dict = resume_entry.dict()
+        resume_dict["fileData"] = Binary(resume_dict["fileData"])  # ✅ Convert to BSON Binary
+
+        resumes_collection.insert_one(resume_dict)
+    except Exception as e:
+        raise HTTPException(status_code=500, detail=f"Failed to store resume: {str(e)}")
+
+    # ✅ Update user’s skills
     try:
         user_id = current_user.get("id")
         if not user_id:
             raise HTTPException(status_code=400, detail="Invalid user data in token")
 
-        result = users_collection.find_one_and_update(
+        users_collection.find_one_and_update(
             {"_id": ObjectId(user_id)},
             {"$set": {"skills": analysis}},
             return_document=True
         )
-        if not result:
-            raise HTTPException(status_code=404, detail="User not found in database")
     except Exception as e:
         raise HTTPException(status_code=500, detail=f"Failed to update user skills: {str(e)}")
 
     return JSONResponse(
         content={
-            "message": "Resume analyzed successfully",
+            "message": "Resume uploaded and analyzed successfully",
             "skills": analysis
         }
     )

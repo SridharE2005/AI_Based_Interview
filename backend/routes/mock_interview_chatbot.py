@@ -2,11 +2,13 @@
 import os
 import uuid
 from datetime import datetime
-from bson import ObjectId
-from fastapi import APIRouter, Depends, HTTPException
-from fastapi.responses import JSONResponse
-from dotenv import load_dotenv
-import google.generativeai as genai
+from bson import ObjectId # type: ignore
+from fastapi import APIRouter, Depends, HTTPException # type: ignore
+from fastapi.responses import JSONResponse # type: ignore
+from dotenv import load_dotenv # type: ignore
+import google.generativeai as genai # type: ignore
+from models.history_model import History
+from db import history_collection
 
 from utils.auth_utils import get_current_user
 from db import users_collection, chat_sessions_collection
@@ -240,7 +242,6 @@ Score: <number between 1 and 10>
 
 # ----------------------
 # Finish Interview
-# ----------------------
 @router.post("/finish")
 async def finish_interview(data: dict, current_user: dict = Depends(get_current_user)):
     session_id = data.get("sessionId")
@@ -252,74 +253,124 @@ async def finish_interview(data: dict, current_user: dict = Depends(get_current_
         raise HTTPException(status_code=404, detail="Chat session not found")
 
     # Mark end time
+    ended_at = datetime.utcnow()
     chat_sessions_collection.update_one(
         {"sessionId": session_id},
-        {"$set": {"endedAt": datetime.utcnow()}}
+        {"$set": {"endedAt": ended_at}}
     )
 
     # Compute metrics
     interactions = chat_session_doc.get("interactions", [])
     num_questions = len(interactions)
-    total_score = sum(i["score"] for i in interactions)
+    total_score = sum(i.get("score", 0) for i in interactions)
+    overall_score_100 = round((total_score / (num_questions * 10)) * 100, 2) if num_questions > 0 else 0
 
-    num_correct = sum(1 for i in interactions if i["score"] >= 9)
-    num_partial = sum(1 for i in interactions if 5 <= i["score"] <= 8)
-    num_wrong = sum(1 for i in interactions if i["score"] <= 4)
-
-    overall_score_100 = 0
-    if num_questions > 0:
-        overall_score_100 = round((total_score / (num_questions * 10)) * 100, 2)
-
-    # Prepare resume_data (conversation logs)
+    # Prepare conversation logs
     resume_data = "\n".join(
-        [f"Bot: {i['question']}\nUser: {i['answer']}\nFeedback: {i.get('feedback', '')}"
-         for i in interactions]
+        [f"Bot: {i['question']}\nUser: {i['answer']}\nFeedback: {i.get('feedback', '')}" for i in interactions]
     )
 
-    # Create evaluation prompt
+    # Generate evaluation prompt for Gemini
     prompt = f"""
-    Based on the following interview conversation between bot and user:
+Based on the following interview conversation between bot and user:
 
-    {resume_data}
+{resume_data}
 
-    Skip the initial greeting or introductory question and the last closing or wrap-up question.
-    Evaluate only the relevant technical or knowledge-based questions in between.
+Skip the initial greeting or closing questions.
+Evaluate only relevant technical/knowledge-based questions.
 
-    Summarize the candidate's performance strictly in the following format:
+Summarize candidate performance strictly in the following format:
 
-    1. Strengths: [one concise sentence summarizing strengths]
-    2. Weakness: [one concise sentence summarizing weaknesses]
-    3. Areas for Improvement: [one concise sentence]
-    4. Number of Questions Attended: {num_questions}
-    5. Number of Correct Answers: {num_correct}
-    6. Number of Wrong Answers: {num_wrong}
-    7. Score out of 100: {overall_score_100}
+1. Strengths: Provide 2-3 concise sentences summarizing the candidate's key strengths.
+2. Weaknesses: Provide 2-3 concise sentences summarizing the candidate's weaknesses or areas where improvement is needed.
+3. Overall Feedback: Provide 2-3 concise sentences giving overall feedback, including suggestions for improvement if any.
 
-    ⚠️ Important Rules:
-    - Output must follow the numbering and format above exactly.
-    - Each response must be concise and on a single line.
-    - Do not include any introductions, explanations, or extra commentary.
-    - Output only the evaluation in the specified format.
+⚠️ Important Rules:
+- Each section (Strengths, Weaknesses, Overall Feedback) should be 2-3 sentences.
+- Do not add any extra commentary or numbering beyond the specified format.
+- Output must be clear, structured, and ready to parse.
     """
 
-    # Call Gemini API for evaluation
+    # Call Gemini API
     model = genai.GenerativeModel("gemini-2.5-flash-lite")
     response = model.generate_content(prompt)
-    evaluation_text = response.text.strip() if response and response.text else "Evaluation not available."
+    evaluation_text = response.text.strip() if response and response.text else ""
 
-    # Save evaluation to DB
+    # Parse multi-line Gemini output into fields
+    strengths_lines, weaknesses_lines, feedback_lines = [], [], []
+    current_field = None
+
+    for line in evaluation_text.split("\n"):
+        line = line.strip()
+        if line.startswith("1. Strengths:"):
+            current_field = "strengths"
+            strengths_lines.append(line.replace("1. Strengths:", "").strip())
+        elif line.startswith("2. Weaknesses:"):
+            current_field = "weaknesses"
+            weaknesses_lines.append(line.replace("2. Weaknesses:", "").strip())
+        elif line.startswith("3. Overall Feedback:"):
+            current_field = "feedback"
+            feedback_lines.append(line.replace("3. Overall Feedback:", "").strip())
+        else:
+            # Append remaining lines to the current field
+            if current_field == "strengths":
+                strengths_lines.append(line)
+            elif current_field == "weaknesses":
+                weaknesses_lines.append(line)
+            elif current_field == "feedback":
+                feedback_lines.append(line)
+
+    # Join lines for each field
+    strengths = " ".join(strengths_lines).strip() or "Not available"
+    weaknesses = " ".join(weaknesses_lines).strip() or "Not available"
+    overall_feedback = " ".join(feedback_lines).strip() or "Not available"
+
+    # Save evaluation to chat session
     chat_sessions_collection.update_one(
         {"sessionId": session_id},
         {"$set": {
-            "overallFeedback": evaluation_text,
+            "overallFeedback": overall_feedback,
+            "strengths": strengths,
+            "weaknesses": weaknesses,
             "overallScore": overall_score_100,
-            "endedAt": datetime.utcnow()
+            "endedAt": ended_at
         }}
     )
 
-    # Return structured evaluation
+    # Add entry to History
+    history_entry = History(
+        userId=chat_session_doc["userId"],
+        interviewType="Technical",
+        score=overall_score_100,
+        feedback=overall_feedback
+    )
+    history_collection.insert_one(history_entry.dict())
+
+    # Update user document
+    user_id = ObjectId(current_user.get("id"))
+    user_doc = users_collection.find_one({"_id": user_id})
+    if not user_doc:
+        raise HTTPException(status_code=404, detail="User not found")
+
+    technical_scores = user_doc.get("technical_scores", [])
+    technical_scores.append(overall_score_100)
+    technical_interview = (user_doc.get("technical_interview") or 0) + 1
+    total_interviews = (user_doc.get("total_interviews") or 0) + 1
+
+    users_collection.update_one(
+        {"_id": user_id},
+        {"$set": {
+            "technical_scores": technical_scores,
+            "technical_interview": technical_interview,
+            "total_interviews": total_interviews
+        }}
+    )
+
+    # Return structured response ready for frontend
     return JSONResponse(content={
-        "overall_feedback": evaluation_text,
-        "overall_score": overall_score_100,
+        "overall_score": int(overall_score_100),  # convert to int
+        "overall_feedback": overall_feedback,
+        "strengths": strengths,
+        "weaknesses": weaknesses,
         "questions_attended": num_questions
     })

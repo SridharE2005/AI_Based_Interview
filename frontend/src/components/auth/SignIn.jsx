@@ -53,7 +53,7 @@ const SignIn = () => {
 
       <div className="w-full max-w-md bg-[#111827]/90 p-8 rounded-2xl shadow-2xl border border-gray-700">
         <h1 className="text-3xl font-bold text-center text-transparent bg-clip-text bg-gradient-to-r from-purple-400 to-blue-400">
-          InterviewAI
+          TechTalkAI
         </h1>
         <p className="text-center text-gray-400 mt-1 text-sm">
           Welcome back! Login to continue 🚀

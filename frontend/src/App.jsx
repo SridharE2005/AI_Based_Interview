@@ -13,6 +13,8 @@ import { ToastContainer } from 'react-toastify';
 import 'react-toastify/dist/ReactToastify.css';
 import ForgotPassword from './components/ForgotPassword';
 import ResumeUpload from './pages/ResumeUpload';
+import Setting from './pages/Settings'; // Import your new Settings page
+import CreateAptitudeTest from './pages/CreateAptitudeTest';
 
 function App() {
   return (
@@ -46,7 +48,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/options"
           element={
@@ -55,7 +56,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/resume-upload"
           element={
@@ -64,7 +64,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/chatbot"
           element={
@@ -73,7 +72,6 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/aptitude"
           element={
@@ -82,12 +80,30 @@ function App() {
             </ProtectedRoute>
           }
         />
-
         <Route
           path="/code-editor"
           element={
             <ProtectedRoute>
               <CodeEditor />
+            </ProtectedRoute>
+          }
+        />
+
+        {/* Settings Page */}
+        <Route
+          path="/settings"
+          element={
+            <ProtectedRoute>
+              <Setting />
+            </ProtectedRoute>
+          }
+        />
+
+         <Route
+          path="/create-aptitude"
+          element={
+            <ProtectedRoute>
+              <CreateAptitudeTest/>
             </ProtectedRoute>
           }
         />
